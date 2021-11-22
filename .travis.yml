@@ -8,4 +8,4 @@ services:
 before_script:
   - psql -c 'create database taxi_trips;' -U postgres
   - psql -a -d taxi_trips -f sql/tables.sql -U postgres
-  - psql -a -d taci_trips -f sql/data.sql -U postgres
+  - psql -a -d taxi_trips -f sql/data.sql -U postgres
