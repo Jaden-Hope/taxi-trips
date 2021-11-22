@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - 12
+
+services:
+  - postgresql
+
+before_script:
+  - psql -c 'create database taxi_trips;' -U postgres
+  - psql -a -d taxi_trips -f tables.SQL -U postgres
+  - psql -a -d taci_trips -f data.SQL -U postgres
